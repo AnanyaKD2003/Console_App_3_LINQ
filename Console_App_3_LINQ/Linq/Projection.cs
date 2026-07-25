@@ -8,7 +8,6 @@ namespace Console_App_3_LINQ.Linq
 {
     public class Projection
     {
-        //Select() Projection Example
         List<int> nums = new()
         {
             1,2,3,4,5,6,7,8,9,10
@@ -29,25 +28,31 @@ namespace Console_App_3_LINQ.Linq
             new Employee { Id = 5, Name = "James" }
         };
 
+        // 1. Select()
+        // Projects each element into a new form.
         public void SelectExample()
         {
             var result = nums.Select(x => x * x);
 
+            Console.WriteLine("Square of Numbers:");
+
             foreach (var i in result)
             {
-                Console.WriteLine(i + " ");
+                Console.WriteLine(i);
             }
 
             var result2 = employees.Select(e => e.Name);
 
-            Console.WriteLine("\nEmployee Names: ");
+            Console.WriteLine("\nEmployee Names:");
 
             foreach (var i in result2)
             {
-                Console.WriteLine(i + " ");
+                Console.WriteLine(i);
             }
         }
 
+        // 2. Anonymous Object
+        // Projects selected properties into an anonymous object.
         public void AnonymousObject()
         {
             var result = employees.Select(e => new
@@ -68,9 +73,10 @@ namespace Console_App_3_LINQ.Linq
             public List<string>? Subjects { get; set; }
         }
 
+        // 3. SelectMany()
+        // Flattens nested collections into a single sequence.
         public void SelectManyExample()
         {
-
             var students = new List<Student>
             {
                 new Student
@@ -87,8 +93,12 @@ namespace Console_App_3_LINQ.Linq
 
             var subjects = students.SelectMany(s => s.Subjects ?? new List<string>());
 
+            Console.WriteLine("All Subjects:");
+
             foreach (var s in subjects)
+            {
                 Console.WriteLine(s);
+            }
         }
     }
 }

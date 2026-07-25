@@ -55,7 +55,8 @@ namespace Console_App_3_LINQ.Linq
             5
         };
 
-        //Where() Fileteration Example
+        // 1. Where()
+        // Returns all elements that satisfy the specified condition.
         public void WhereExample()
         {
             var result = employees.Where(x => x.Age > 25).ToList();
@@ -74,7 +75,7 @@ namespace Console_App_3_LINQ.Linq
                 Console.Write(i + " ");
             }
 
-            Console.WriteLine("\nEven Number wityh Distinct ::");
+            Console.WriteLine("\nEven Number with Distinct ::");
 
             var result3 = nums.Where(x => x % 2 == 0).Distinct();
 
@@ -87,20 +88,21 @@ namespace Console_App_3_LINQ.Linq
 
             var result4 = employees.Where(x => x.Department == "IT");
 
-            foreach (var i in result)
+            foreach (var i in result4)
             {
                 Console.WriteLine($"Id: {i.Id}, Name: {i.Name}, Age: {i.Age}, Department: {i.Department}, Salary: {i.Salary}");
             }
 
-            Console.WriteLine("\nMultiple Conditins :: ");
+            Console.WriteLine("\nMultiple Conditions :: ");
 
             var result5 = employees.Where(x => x.Department == "IT" && x.Salary > 50000);
+
             foreach (var i in result5)
             {
                 Console.WriteLine($"Id: {i.Id}, Name: {i.Name}, Age: {i.Age}, Department: {i.Department}, Salary: {i.Salary}");
             }
 
-            Console.WriteLine("\nSearching name with Cotanins");
+            Console.WriteLine("\nSearching Name with Contains ::");
 
             var result6 = names.Where(x => x.Contains("o"));
 
@@ -110,9 +112,11 @@ namespace Console_App_3_LINQ.Linq
             }
         }
 
+        // 2. OfType()
+        // Returns only the elements of the specified type from a mixed collection.
         public void ofTypeExample()
         {
-            var result = data.OfType<String>();
+            var result = data.OfType<string>();
 
             foreach (var item in result)
             {
@@ -120,11 +124,13 @@ namespace Console_App_3_LINQ.Linq
             }
         }
 
+        // 3. Cast()
+        // Casts all elements to the specified type. Throws an exception if a cast is invalid.
         public void castExample()
         {
             var result = data.OfType<string>().Cast<string>();
 
-            foreach(var i in result)
+            foreach (var i in result)
             {
                 Console.WriteLine(i);
             }
