@@ -56,12 +56,56 @@
 // elementOperators.DefaultIfEmptyExample();
 
 // Aggregation
-Aggregation aggregation = new Aggregation();
-aggregation.CountExample();
-aggregation.LongCountExample();
-aggregation.SumExample();
-aggregation.MinExample();
-aggregation.MaxExample();
-aggregation.AverageExample();
-aggregation.AggregateExample();
+// Aggregation aggregation = new Aggregation();
+// aggregation.CountExample();
+// aggregation.LongCountExample();
+// aggregation.SumExample();
+// aggregation.MinExample();
+// aggregation.MaxExample();
+// aggregation.AverageExample();
+// aggregation.AggregateExample();
+
+// Set Operators
+// SetOperators setOperators = new SetOperators();
+// setOperators.DistinctExample();
+// setOperators.UnionExample();
+// setOperators.IntersectExample();
+// setOperators.ExceptExample();
+// setOperators.ConcatExample();
+
+// Generation
+// Generation generation = new Generation();
+// generation.RangeExample();
+// generation.RepeatExample();
+// generation.EmptyExample();
+
+// Conversion
+// Conversion conversion = new Conversion();
+// conversion.ToListExample();
+// conversion.ToArrayExample();
+// conversion.ToDictionaryExample();
+// conversion.ToLookupExample();
+// conversion.AsEnumerableExample();
+// conversion.AsQueryableExample();
+
+// Grouping
+// Grouping grouping = new Grouping();
+// grouping.GroupByDepartment();
+// grouping.CountEmployeesByDepartment();
+// grouping.AverageSalaryByDepartment();
+// grouping.TotalSalaryByDepartment();
+// grouping.HighestSalaryByDepartment();
+// grouping.LowestSalaryByDepartment();
+// grouping.GroupByMultipleKeys();
+// grouping.DepartmentSummary();
+// grouping.DepartmentStatistics();
+
+// Join
+Join join = new Join();
+join.InnerJoinExample();
+join.GroupJoinExample();
+join.LeftOuterJoinExample();
+join.CrossJoinExample();
+join.CompositeKeyJoinExample();
+join.JoinWithProjectionExample();
 

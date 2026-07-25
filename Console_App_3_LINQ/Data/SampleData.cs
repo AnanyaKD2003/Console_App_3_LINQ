@@ -24,21 +24,98 @@ public static class SampleData
         "Jenny"
     };
 
-    public static List<Employee> Employees => new()
+    public static List<Employee> Employees = new()
     {
-        new Employee{ Id=1, Name="John", Age=30, Department="IT", Salary=50000},
-        new Employee{ Id=2, Name="Jane", Age=25, Department="HR", Salary=40000},
-        new Employee{ Id=3, Name="Jack", Age=35, Department="Finance", Salary=60000},
-        new Employee{ Id=4, Name="Jill", Age=28, Department="IT", Salary=55000},
-        new Employee{ Id=5, Name="James", Age=32, Department="HR", Salary=45000},
-        new Employee{ Id=6, Name="Jenny", Age=29, Department="Finance", Salary=65000}
+        new Employee
+        {
+            Id = 1,
+            Name = "John",
+            Age = 30,
+            Department = "IT",
+            Salary = 50000,
+            Location = "Bangalore"
+        },
+
+        new Employee
+        {
+            Id = 2,
+            Name = "Jane",
+            Age = 25,
+            Department = "HR",
+            Salary = 40000,
+            Location = "Hyderabad"
+        },
+
+        new Employee
+        {
+            Id = 3,
+            Name = "Jack",
+            Age = 35,
+            Department = "Finance",
+            Salary = 60000,
+            Location = "Chennai"
+        },
+
+        new Employee
+        {
+            Id = 4,
+            Name = "Jill",
+            Age = 28,
+            Department = "IT",
+            Salary = 55000,
+            Location = "Bangalore"
+        },
+
+        new Employee
+        {
+            Id = 5,
+            Name = "James",
+            Age = 32,
+            Department = "HR",
+            Salary = 45000,
+            Location = "Hyderabad"
+        },
+
+        new Employee
+        {
+            Id = 6,
+            Name = "Jenny",
+            Age = 29,
+            Department = "Finance",
+            Salary = 65000,
+            Location = "Chennai"
+        }
     };
 
-    public static List<Department> Departments => new()
+    public static List<Department> Departments = new()
     {
-        new Department{ Id=1, Name="IT"},
-        new Department{ Id=2, Name="HR"},
-        new Department{ Id=3, Name="Finance"}
+        new Department
+        {
+            Id = 1,
+            Name = "IT",
+            Location = "Bangalore"
+        },
+
+        new Department
+        {
+            Id = 2,
+            Name = "HR",
+            Location = "Hyderabad"
+        },
+
+        new Department
+        {
+            Id = 3,
+            Name = "Finance",
+            Location = "Chennai"
+        },
+
+        new Department
+        {
+            Id = 4,
+            Name = "Marketing",
+            Location = "Mumbai"
+        }
     };
 
     public static List<Student> Students => new()
